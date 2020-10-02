@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "ChatApp",
+    "icon": "./assets/icon.png",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "sdkVersion": "39.0.0",
+    "slug": "ChatApp",
+    "android": {
+      "package": "com.kabilesh.kabileshChat",
+      "versionCode": 1
+    }
+  }
+}
