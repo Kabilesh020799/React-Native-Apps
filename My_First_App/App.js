@@ -1,12 +1,10 @@
 import React from "react";
 import { View } from "react-native";
 import AppText from "./app/components/AppText/AppText";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import MessagesScreen from "./app/screens/MessagesScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-
+import AccountScreen from "./app/screens/AccountScreen";
+import ListingsScreen from "./app/screens/ListingsScreen";
 const App = () => {
-  return <MessagesScreen />;
+  return <ListingsScreen />;
 };
 
 export default App;
