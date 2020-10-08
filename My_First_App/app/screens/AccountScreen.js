@@ -1,11 +1,10 @@
 import React from "react";
 import { StyleSheet, View, FlatList } from "react-native";
 
-import Screen from "./../components/Screen";
-import ListItem from "../components/ListItem";
+import Screen from "../components/Screen";
+import { ListItem, ListItemSeparator } from "../components/lists";
 import colors from "../config/colors";
-import Icon from "./../components/Icon";
-import ListItemSeparator from "../components/ListItemSeparator";
+import Icon from "../components/Icon";
 
 const menuItems = [
   {
@@ -24,25 +23,25 @@ const menuItems = [
   },
 ];
 
-function AccountScreen() {
+function AccountScreen(props) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="Kabilesh"
-          subTitle="my reaact native app"
-          image={require("../assets/Dp.jpg")}
+          title="Mosh Hamedani"
+          subTitle="programmingwithmosh@gmail.com"
+          image={require("../assets/mosh.jpg")}
         />
       </View>
       <View style={styles.container}>
         <FlatList
           data={menuItems}
-          keyExtractor={(item) => item.title}
+          keyExtractor={(menuItem) => menuItem.title}
           ItemSeparatorComponent={ListItemSeparator}
           renderItem={({ item }) => (
             <ListItem
               title={item.title}
-              ImageComponent={
+              IconComponent={
                 <Icon
                   name={item.icon.name}
                   backgroundColor={item.icon.backgroundColor}
@@ -54,17 +53,19 @@ function AccountScreen() {
       </View>
       <ListItem
         title="Log Out"
-        ImageComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
+        IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
       />
     </Screen>
   );
 }
+
 const styles = StyleSheet.create({
+  screen: {
+    backgroundColor: colors.light,
+  },
   container: {
     marginVertical: 20,
   },
-  screen: {
-    backgroundColor: "#f8f4f4",
-  },
 });
+
 export default AccountScreen;

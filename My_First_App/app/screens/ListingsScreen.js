@@ -3,12 +3,14 @@ import { FlatList, StyleSheet } from "react-native";
 
 import Screen from "../components/Screen";
 import Card from "../components/Card";
+import colors from "../config/colors";
+
 const listings = [
   {
     id: 1,
     title: "Red jacket for sale",
     price: 100,
-    image: require("./../assets/jacket.jpg"),
+    image: require("../assets/jacket.jpg"),
   },
   {
     id: 2,
@@ -18,7 +20,7 @@ const listings = [
   },
 ];
 
-function ListingsScreen() {
+function ListingsScreen(props) {
   return (
     <Screen style={styles.screen}>
       <FlatList
@@ -39,7 +41,7 @@ function ListingsScreen() {
 const styles = StyleSheet.create({
   screen: {
     padding: 20,
-    backgroundColor: "#f8f4f4",
+    backgroundColor: colors.light,
   },
 });
 
